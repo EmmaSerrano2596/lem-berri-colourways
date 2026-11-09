@@ -120,6 +120,28 @@ details p{margin:0 0 16px;color:#4a3640}
 .gloss b{display:block;margin-bottom:2px}
 .gloss span{font-size:15px;color:#4a3640}
 
+/* solo shots, dark */
+section.dark{background:#211720;color:#f6eef1;border-top:0}
+section.dark h2,section.dark h3{color:#fff}
+section.dark .eyebrow{color:#b9a3ad}
+section.dark .sub{color:#b9a3ad;margin:0 0 18px}
+.dl-all,.dl-btn{display:inline-block;color:#fff;text-decoration:none;font-weight:600;font-size:14px;border:1.5px solid #fff;border-radius:999px;padding:9px 18px;white-space:nowrap}
+.dl-all{background:#fff;color:#211720}
+.dl-all:hover{background:#ff4fa3;border-color:#ff4fa3;color:#fff}
+.dl-btn:hover{border-color:#ff4fa3;color:#ff4fa3}
+.set{margin-top:48px}
+.set-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:18px}
+.set-head h3{font-size:30px}
+.set-head p{margin:4px 0 0;color:#b9a3ad;font-size:15px}
+.shots{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.shots figure{margin:0;background:#2c2029;border:1px solid #3d2e38;border-radius:18px;overflow:hidden}
+.shots img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .3s}
+.shots figure:hover img{transform:scale(1.03)}
+.shots figcaption{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;padding:14px 16px;font-size:15px}
+.shots figcaption a{color:#ff4fa3;font-weight:600;font-size:13px;text-decoration:none;flex:none}
+.shots figcaption a:hover{text-decoration:underline}
+@media (max-width:860px){.shots{grid-template-columns:repeat(2,1fr)}.set-head{flex-direction:column;align-items:flex-start}}
+
 footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
 
 @media (max-width:860px){
@@ -156,28 +178,15 @@ footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--muted);f
 
 <nav class="jump" aria-label="Jump to">
   <div class="wrap">
-    <a href="#basics">The basics</a>
     <a href="#compare">Lem vs Berri</a>
     <a href="#lem">Lem</a>
     <a href="#berri">Berri</a>
     <a href="#bowl">Superfruit Bowl</a>
+    <a href="#solo">Solo shots</a>
     <a href="#faq">FAQ</a>
     <a href="#words">Glossary</a>
   </div>
 </nav>
-
-<!-- BASICS -->
-<section id="basics">
-  <div class="wrap">
-    <div class="eyebrow">Start here</div>
-    <h2>Hello Nancy in <em>20 seconds</em></h2>
-    <div class="grid3" style="margin-top:24px">
-      <div class="card"><h3>Who we are</h3><p>Hello Nancy is a sexual wellness brand. We make pleasure toys designed for women, mostly for the clitoris (external use).</p></div>
-      <div class="card"><h3>Our signature look</h3><p>Our toys look like fruit. A lemon, a raspberry, an avocado. They're cute enough to leave on a shelf and nobody would guess what they are.</p></div>
-      <div class="card"><h3>What people love</h3><p>Quiet, waterproof, made of body-safe silicone, and easy for first-timers. Lem alone has 20,000+ reviews at 4.8 stars.</p></div>
-    </div>
-  </div>
-</section>
 
 <!-- COMPARE -->
 <section id="compare">
@@ -256,15 +265,6 @@ footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--muted);f
       <div class="colour"><img src="img/lem-candy-red-01-clean-front.jpg" alt="Candy Red Lem"><div><b><i style="background:var(--lred)"></i>Candy Red</b><p>Classic holiday red. Bold and festive.</p></div></div>
       <div class="colour"><img src="img/lem-mulled-wine-01-clean-front.jpg" alt="Mulled Wine Lem"><div><b><i style="background:var(--lwine)"></i>Mulled Wine</b><p>Deep, moody burgundy. The grown-up pick.</p></div></div>
       <div class="colour"><img src="img/lem-yellow-gold-01-clean-front.jpg" alt="Yellow Gold Lem"><div><b><i style="background:var(--lgold)"></i>Yellow Gold</b><p>A richer, warmer take on the original lemon yellow.</p></div></div>
-    </div>
-
-    <div class="grid2" style="margin-top:20px;align-items:center">
-      <img src="img/lem-colourways.gif" alt="Animation cycling all four Lem colours" style="border-radius:20px">
-      <div>
-        <h3>For reference: the original Lem</h3>
-        <p>The Lem most customers know is lemon yellow. The new colours sit next to it in the range. If a customer asks "is this a new toy?", the answer is no: it's the same Lem in a new colour.</p>
-        <img src="https://hellonancy.com/cdn/shop/files/WhatsAppImage2023-11-18at14.19.19_2acc31e8.webp?v=1762419856&width=800" alt="Original yellow Lem" style="border-radius:16px;max-width:240px;margin-top:10px" loading="lazy">
-      </div>
     </div>
   </div>
 </section>
@@ -349,6 +349,66 @@ footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--muted);f
       <figure><img src="img/trio-candy-red.jpg" alt="Trio with Candy Red Lem" loading="lazy"><figcaption>With Candy Red Lem</figcaption></figure>
       <figure><img src="img/trio-mulled-wine.jpg" alt="Trio with Mulled Wine Lem" loading="lazy"><figcaption>With Mulled Wine Lem</figcaption></figure>
       <figure><img src="img/trio-yellow-gold.jpg" alt="Trio with Yellow Gold Lem" loading="lazy"><figcaption>With Yellow Gold Lem</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- SOLO SHOTS -->
+<section id="solo" class="dark">
+  <div class="wrap">
+    <div class="eyebrow">Image bank</div>
+    <h2>Solo shots</h2>
+    <p class="sub">Each product on its own. Click any image for full size, or download one shot or a whole set.</p>
+    <a class="dl-all" href="img/solo-all.zip" download>Download all 20 (.zip)</a>
+
+    <div class="set">
+      <div class="set-head"><div><h3>Black Berri</h3><p>Deep plum Berri, studio and in hand.</p></div><a class="dl-btn" href="img/solo-berri.zip" download>Download all 4 (.zip)</a></div>
+      <div class="shots">
+        <figure><a href="img/solo-berri-plinth.jpg" target="_blank"><img src="img/solo-berri-plinth.jpg" alt="Black Berri on plinth" loading="lazy"></a><figcaption><b>Black Berri, plinth</b><a href="img/solo-berri-plinth.jpg" download>Download</a></figcaption></figure>
+        <figure><a href="img/solo-berri-hand.jpg" target="_blank"><img src="img/solo-berri-hand.jpg" alt="Black Berri in hand" loading="lazy"></a><figcaption><b>Black Berri, in hand</b><a href="img/solo-berri-hand.jpg" download>Download</a></figcaption></figure>
+        <figure><a href="img/solo-berri-closeup.jpg" target="_blank"><img src="img/solo-berri-closeup.jpg" alt="Black Berri close-up" loading="lazy"></a><figcaption><b>Black Berri, close-up</b><a href="img/solo-berri-closeup.jpg" download>Download</a></figcaption></figure>
+        <figure><a href="img/solo-berri-studio.jpg" target="_blank"><img src="img/solo-berri-studio.jpg" alt="Black Berri studio" loading="lazy"></a><figcaption><b>Black Berri, studio</b><a href="img/solo-berri-studio.jpg" download>Download</a></figcaption></figure>
+      </div>
+    </div>
+
+    <div class="set">
+      <div class="set-head"><div><h3>Pink Lem</h3><p>Leads the Superfruit Bowl visuals.</p></div><a class="dl-btn" href="img/solo-pink.zip" download>Download all 4 (.zip)</a></div>
+      <div class="shots">
+        <figure><a href="img/solo-pink-plinth.jpg" target="_blank"><img src="img/solo-pink-plinth.jpg" alt="Pink Lem on plinth" loading="lazy"></a><figcaption><b>Pink Lem, plinth</b><a href="img/solo-pink-plinth.jpg" download>Download</a></figcaption></figure>
+        <figure><a href="img/solo-pink-hand.jpg" target="_blank"><img src="img/solo-pink-hand.jpg" alt="Pink Lem in hand" loading="lazy"></a><figcaption><b>Pink Lem, in hand</b><a href="img/solo-pink-hand.jpg" download>Download</a></figcaption></figure>
+        <figure><a href="img/solo-pink-opening.jpg" target="_blank"><img src="img/solo-pink-opening.jpg" alt="Pink Lem opening" loading="lazy"></a><figcaption><b>Pink Lem, opening</b><a href="img/solo-pink-opening.jpg" download>Download</a></figcaption></figure>
+        <figure><a href="img/solo-pink-side.jpg" target="_blank"><img src="img/solo-pink-side.jpg" alt="Pink Lem side" loading="lazy"></a><figcaption><b>Pink Lem, side</b><a href="img/solo-pink-side.jpg" download>Download</a></figcaption></figure>
+      </div>
+    </div>
+
+    <div class="set">
+      <div class="set-head"><div><h3>Candy Red Lem</h3><p>Classic holiday red.</p></div><a class="dl-btn" href="img/solo-red.zip" download>Download all 4 (.zip)</a></div>
+      <div class="shots">
+        <figure><a href="img/solo-red-plinth.jpg" target="_blank"><img src="img/solo-red-plinth.jpg" alt="Candy Red Lem on plinth" loading="lazy"></a><figcaption><b>Candy Red Lem, plinth</b><a href="img/solo-red-plinth.jpg" download>Download</a></figcaption></figure>
+        <figure><a href="img/solo-red-hand.jpg" target="_blank"><img src="img/solo-red-hand.jpg" alt="Candy Red Lem in hand" loading="lazy"></a><figcaption><b>Candy Red Lem, in hand</b><a href="img/solo-red-hand.jpg" download>Download</a></figcaption></figure>
+        <figure><a href="img/solo-red-satin.jpg" target="_blank"><img src="img/solo-red-satin.jpg" alt="Candy Red Lem on satin" loading="lazy"></a><figcaption><b>Candy Red Lem, satin</b><a href="img/solo-red-satin.jpg" download>Download</a></figcaption></figure>
+        <figure><a href="img/solo-red-opening.jpg" target="_blank"><img src="img/solo-red-opening.jpg" alt="Candy Red Lem opening" loading="lazy"></a><figcaption><b>Candy Red Lem, opening</b><a href="img/solo-red-opening.jpg" download>Download</a></figcaption></figure>
+      </div>
+    </div>
+
+    <div class="set">
+      <div class="set-head"><div><h3>Mulled Wine Lem</h3><p>Deep, moody burgundy.</p></div><a class="dl-btn" href="img/solo-wine.zip" download>Download all 4 (.zip)</a></div>
+      <div class="shots">
+        <figure><a href="img/solo-wine-plinth.jpg" target="_blank"><img src="img/solo-wine-plinth.jpg" alt="Mulled Wine Lem on plinth" loading="lazy"></a><figcaption><b>Mulled Wine Lem, plinth</b><a href="img/solo-wine-plinth.jpg" download>Download</a></figcaption></figure>
+        <figure><a href="img/solo-wine-hand.jpg" target="_blank"><img src="img/solo-wine-hand.jpg" alt="Mulled Wine Lem in hand" loading="lazy"></a><figcaption><b>Mulled Wine Lem, in hand</b><a href="img/solo-wine-hand.jpg" download>Download</a></figcaption></figure>
+        <figure><a href="img/solo-wine-opening.jpg" target="_blank"><img src="img/solo-wine-opening.jpg" alt="Mulled Wine Lem opening" loading="lazy"></a><figcaption><b>Mulled Wine Lem, opening</b><a href="img/solo-wine-opening.jpg" download>Download</a></figcaption></figure>
+        <figure><a href="img/solo-wine-side.jpg" target="_blank"><img src="img/solo-wine-side.jpg" alt="Mulled Wine Lem side" loading="lazy"></a><figcaption><b>Mulled Wine Lem, side</b><a href="img/solo-wine-side.jpg" download>Download</a></figcaption></figure>
+      </div>
+    </div>
+
+    <div class="set">
+      <div class="set-head"><div><h3>Yellow Gold Lem</h3><p>A warmer take on the original lemon yellow.</p></div><a class="dl-btn" href="img/solo-gold.zip" download>Download all 4 (.zip)</a></div>
+      <div class="shots">
+        <figure><a href="img/solo-gold-studio.jpg" target="_blank"><img src="img/solo-gold-studio.jpg" alt="Yellow Gold Lem studio" loading="lazy"></a><figcaption><b>Yellow Gold Lem, studio</b><a href="img/solo-gold-studio.jpg" download>Download</a></figcaption></figure>
+        <figure><a href="img/solo-gold-opening.jpg" target="_blank"><img src="img/solo-gold-opening.jpg" alt="Yellow Gold Lem opening" loading="lazy"></a><figcaption><b>Yellow Gold Lem, opening</b><a href="img/solo-gold-opening.jpg" download>Download</a></figcaption></figure>
+        <figure><a href="img/solo-gold-side.jpg" target="_blank"><img src="img/solo-gold-side.jpg" alt="Yellow Gold Lem side" loading="lazy"></a><figcaption><b>Yellow Gold Lem, side</b><a href="img/solo-gold-side.jpg" download>Download</a></figcaption></figure>
+        <figure><a href="img/solo-gold-dynamic.jpg" target="_blank"><img src="img/solo-gold-dynamic.jpg" alt="Yellow Gold Lem angled" loading="lazy"></a><figcaption><b>Yellow Gold Lem, angled</b><a href="img/solo-gold-dynamic.jpg" download>Download</a></figcaption></figure>
+      </div>
     </div>
   </div>
 </section>
