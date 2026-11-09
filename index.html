@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Lem &amp; Berri New Colours</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fbf6f4; --card:#ffffff; --ink:#2a1a22; --muted:#7a6670; --line:#eadfe2;
+  --pink:#f3dce2; --accent:#c2185b; --soft:#fdf0f3;
+  --berri:#5a1846; --lpink:#e8148f; --lred:#c8102e; --lwine:#6b1d2f; --lgold:#e2b63a; --lemon:#f3dc4a;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--accent)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:700;line-height:1.1;margin:0}
+h1{font-size:clamp(44px,8vw,84px);letter-spacing:-.02em}
+h1 em,h2 em{font-style:italic;font-weight:500;color:var(--accent)}
+h2{font-size:clamp(32px,5vw,48px);margin-bottom:12px}
+h3{font-size:22px;margin-bottom:6px}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:12px}
+.lede{font-size:19px;max-width:680px;color:#4a3640}
+section{padding:72px 0;border-top:1px solid var(--line)}
+
+/* hero */
+header{padding:48px 0 32px}
+.tagline{font-family:Fraunces,serif;font-style:italic;font-size:24px;color:var(--muted);margin:10px 0 24px}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:28px 0}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}
+.fact b{display:block;font-family:Fraunces,serif;font-size:28px;line-height:1.1}
+.fact span{font-size:13px;color:var(--muted)}
+.hero-img{border-radius:24px;overflow:hidden;margin-top:12px}
+.hero-img img{width:100%;aspect-ratio:16/9;object-fit:cover}
+
+nav.jump{position:sticky;top:0;z-index:10;background:rgba(251,246,244,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav.jump .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:10px;padding-bottom:10px}
+nav.jump a{white-space:nowrap;text-decoration:none;color:var(--ink);font-size:14px;font-weight:500;padding:6px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card)}
+nav.jump a:hover{border-color:var(--accent);color:var(--accent)}
+
+/* cards */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
+.note{background:var(--soft);border-left:4px solid var(--accent);border-radius:12px;padding:16px 18px;font-size:15px}
+.note b{color:var(--accent)}
+
+/* compare table */
+table{width:100%;border-collapse:collapse;background:var(--card);border-radius:20px;overflow:hidden;border:1px solid var(--line);font-size:15px}
+th,td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:Fraunces,serif;font-size:20px;background:var(--soft)}
+td:first-child{color:var(--muted);font-weight:600;width:28%}
+tr:last-child td{border-bottom:0}
+.tbl-wrap{overflow-x:auto}
+
+/* product */
+.prod-head{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:start}
+.quote{font-family:Fraunces,serif;font-style:italic;font-size:22px;color:var(--accent);margin:8px 0 16px}
+.price{display:inline-flex;gap:10px;align-items:baseline;margin:6px 0 18px}
+.price b{font-size:26px;font-family:Fraunces,serif}
+.price s{color:var(--muted)}
+.steps{list-style:none;padding:0;margin:20px 0;display:grid;gap:10px}
+.steps li{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.steps .n{flex:none;width:28px;height:28px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-size:13px;font-weight:600}
+.specs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:24px}
+.spec{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.spec small{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.spec span{font-weight:600}
+
+/* colour picker */
+.picker{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:16px;position:sticky;top:64px}
+.picker .main{border-radius:16px;overflow:hidden;background:#f1eef0}
+.picker .main img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 12px 6px 6px;font:500 14px Inter,sans-serif;cursor:pointer;color:var(--ink)}
+.chip i{width:22px;height:22px;border-radius:50%;display:block;border:2px solid #fff;box-shadow:0 0 0 1px var(--line)}
+.chip[aria-pressed="true"]{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink)}
+.chip .tag{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:var(--accent);color:#fff;border-radius:999px;padding:2px 6px}
+.chip .tag.old{background:#bbb}
+.views{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.views button{padding:0;border:2px solid transparent;border-radius:10px;overflow:hidden;cursor:pointer;background:none}
+.views button[aria-pressed="true"]{border-color:var(--ink)}
+.views img{aspect-ratio:1/1;object-fit:cover;width:100%}
+.caption{font-size:13px;color:var(--muted);margin-top:8px}
+
+/* colour cards */
+.colours{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+.colour{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.colour img{aspect-ratio:1/1;object-fit:cover;width:100%}
+.colour div{padding:12px 14px}
+.colour b{display:flex;align-items:center;gap:8px}
+.colour b i{width:14px;height:14px;border-radius:50%;display:inline-block}
+.colour p{margin:4px 0 0;font-size:14px;color:var(--muted)}
+
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
+.gallery figure{margin:0}
+.gallery img{border-radius:14px;aspect-ratio:1/1;object-fit:cover;width:100%}
+.gallery figcaption{font-size:13px;color:var(--muted);margin-top:6px}
+
+.bowl{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.bowl img{border-radius:20px}
+.inbox{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:10px}
+.inbox li{display:flex;gap:12px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.inbox i{width:18px;height:18px;border-radius:50%;flex:none}
+
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;padding:0 18px}
+summary{cursor:pointer;font-weight:600;padding:16px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";font-size:20px;color:var(--muted)}
+details[open] summary::after{content:"−"}
+details p{margin:0 0 16px;color:#4a3640}
+
+.gloss{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.gloss div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.gloss b{display:block;margin-bottom:2px}
+.gloss span{font-size:15px;color:#4a3640}
+
+footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+
+@media (max-width:860px){
+  .facts{grid-template-columns:repeat(2,1fr)}
+  .grid2,.prod-head,.bowl{grid-template-columns:1fr}
+  .grid3{grid-template-columns:1fr}
+  .colours,.gallery{grid-template-columns:repeat(2,1fr)}
+  .specs{grid-template-columns:repeat(2,1fr)}
+  .picker{position:static}
+  .gloss{grid-template-columns:1fr}
+  section{padding:52px 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Hello Nancy · Product brief · Nov 2026</div>
+    <h1>Lem &amp; Berri,<br><em>new colours.</em></h1>
+    <p class="tagline">Same favourites. Fresh new looks for the holidays.</p>
+    <p class="lede">We're launching our two hero toys, <b>Lem</b> and <b>Berri</b>, in new colourways. Nothing about how they work changes. Same feel, same settings, same specs. Only the colour is new. This page explains what each product is, so anyone can pick it up with zero background.</p>
+
+    <div class="facts">
+      <div class="fact"><b>2</b><span>products: Lem and Berri</span></div>
+      <div class="fact"><b>5</b><span>new colours (4 Lem, 1 Berri)</span></div>
+      <div class="fact"><b>0</b><span>changes to how they work</span></div>
+      <div class="fact"><b>BFCM</b><span>first seen in the Black Friday Superfruit Bowl</span></div>
+    </div>
+
+    <div class="hero-img"><img src="img/trio-pink.jpg" alt="Avo, Black Berri and Pink Lem in snow with ornaments"></div>
+  </div>
+</header>
+
+<nav class="jump" aria-label="Jump to">
+  <div class="wrap">
+    <a href="#basics">The basics</a>
+    <a href="#compare">Lem vs Berri</a>
+    <a href="#lem">Lem</a>
+    <a href="#berri">Berri</a>
+    <a href="#bowl">Superfruit Bowl</a>
+    <a href="#faq">FAQ</a>
+    <a href="#words">Glossary</a>
+  </div>
+</nav>
+
+<!-- BASICS -->
+<section id="basics">
+  <div class="wrap">
+    <div class="eyebrow">Start here</div>
+    <h2>Hello Nancy in <em>20 seconds</em></h2>
+    <div class="grid3" style="margin-top:24px">
+      <div class="card"><h3>Who we are</h3><p>Hello Nancy is a sexual wellness brand. We make pleasure toys designed for women, mostly for the clitoris (external use).</p></div>
+      <div class="card"><h3>Our signature look</h3><p>Our toys look like fruit. A lemon, a raspberry, an avocado. They're cute enough to leave on a shelf and nobody would guess what they are.</p></div>
+      <div class="card"><h3>What people love</h3><p>Quiet, waterproof, made of body-safe silicone, and easy for first-timers. Lem alone has 20,000+ reviews at 4.8 stars.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARE -->
+<section id="compare">
+  <div class="wrap">
+    <div class="eyebrow">Side by side</div>
+    <h2>Lem vs Berri, <em>in plain words</em></h2>
+    <p class="lede" style="margin-bottom:24px">Both are small, palm-sized toys used on the outside of the body. The difference is the feeling.</p>
+    <div class="tbl-wrap">
+    <table>
+      <tr><td></td><th>Lem 🍋</th><th>Berri 🍓</th></tr>
+      <tr><td>Looks like</td><td>A lemon</td><td>A raspberry</td></tr>
+      <tr><td>What it does</td><td>Gentle air pulses (suction) through a small opening</td><td>Rhythmic tapping, like a fingertip</td></tr>
+      <tr><td>Feels like</td><td>A soft pulling, kissing sensation</td><td>Light, steady taps that build slowly</td></tr>
+      <tr><td>Best for</td><td>First-timers and anyone who wants a quick, strong result</td><td>A slow build, longer sessions, and people who find suction too intense</td></tr>
+      <tr><td>Settings</td><td>12 (8 intensities + 4 rhythms)</td><td>12 (6 intensities + 6 tapping rhythms)</td></tr>
+      <tr><td>Extras</td><td>None needed</td><td>3 swappable tapping caps (soft, medium, strong)</td></tr>
+      <tr><td>Price on site</td><td>$89 <s style="color:var(--muted)">$159</s></td><td>$95 <s style="color:var(--muted)">$189</s></td></tr>
+      <tr><td>New colours</td><td>Pink, Candy Red, Mulled Wine, Yellow Gold</td><td>Black Berri (deep plum)</td></tr>
+    </table>
+    </div>
+  </div>
+</section>
+
+<!-- LEM -->
+<section id="lem">
+  <div class="wrap">
+    <div class="prod-head">
+      <div>
+        <div class="eyebrow">Product 01 · Best seller · Air suction</div>
+        <h2>Lem</h2>
+        <p class="quote">"So good, you'll scream."</p>
+        <div class="price"><b>$89</b><s>$159</s></div>
+        <p>Lem is our best-selling toy. It's a lemon-shaped clitoral massager that uses <b>air pulses</b> instead of buzzing. You place the small opening over the clitoris, and it creates a gentle pulling, sucking sensation that you can turn up or down. It's the toy we recommend to beginners.</p>
+
+        <h3 style="margin-top:28px">How it works</h3>
+        <ol class="steps">
+          <li><span class="n">1</span><div><b>Charge it.</b> 90 minutes gives up to 2 hours of play.</div></li>
+          <li><span class="n">2</span><div><b>Turn it on.</b> Hold the button for 2 seconds.</div></li>
+          <li><span class="n">3</span><div><b>Place and play.</b> Set the opening over the clitoris. A little water-based lube helps it seal.</div></li>
+          <li><span class="n">4</span><div><b>Change settings.</b> Short presses move through the 12 settings. Start on 1.</div></li>
+        </ol>
+
+        <div class="note"><b>The new colours:</b> Pink, Candy Red, Mulled Wine and Yellow Gold. Same Lem inside, new colour outside. Use the picker to see each one.</div>
+      </div>
+
+      <div class="picker" data-picker>
+        <div class="main"><img data-main src="img/lem-pink-01-clean-front.jpg" alt="Pink Lem"></div>
+        <div class="views">
+          <button data-view="01-clean-front" aria-pressed="true"><img src="img/lem-pink-01-clean-front.jpg" alt="Studio"></button>
+          <button data-view="07-hand" aria-pressed="false"><img src="img/lem-pink-07-hand.jpg" alt="In hand"></button>
+          <button data-view="09-christmas" aria-pressed="false"><img src="img/lem-pink-09-christmas.jpg" alt="Holiday"></button>
+        </div>
+        <div class="chips">
+          <button class="chip" data-colour="pink" aria-pressed="true"><i style="background:var(--lpink)"></i>Pink <span class="tag">New</span></button>
+          <button class="chip" data-colour="candy-red" aria-pressed="false"><i style="background:var(--lred)"></i>Candy Red <span class="tag">New</span></button>
+          <button class="chip" data-colour="mulled-wine" aria-pressed="false"><i style="background:var(--lwine)"></i>Mulled Wine <span class="tag">New</span></button>
+          <button class="chip" data-colour="yellow-gold" aria-pressed="false"><i style="background:var(--lgold)"></i>Yellow Gold <span class="tag">New</span></button>
+        </div>
+        <p class="caption">Tap a colour, then a view: studio, in hand, holiday.</p>
+      </div>
+    </div>
+
+    <div class="specs">
+      <div class="spec"><small>Size</small><span>7.8 × 5.1 cm</span></div>
+      <div class="spec"><small>Material</small><span>Medical-grade silicone</span></div>
+      <div class="spec"><small>Water</small><span>IPX7 waterproof</span></div>
+      <div class="spec"><small>Noise</small><span>Under 50 dB, whisper-quiet</span></div>
+      <div class="spec"><small>Charge</small><span>90 min</span></div>
+      <div class="spec"><small>Play time</small><span>Up to 120 min</span></div>
+      <div class="spec"><small>Settings</small><span>12</span></div>
+      <div class="spec"><small>Use</small><span>External only</span></div>
+    </div>
+
+    <div class="colours">
+      <div class="colour"><img src="img/lem-pink-01-clean-front.jpg" alt="Pink Lem"><div><b><i style="background:var(--lpink)"></i>Pink</b><p>Bright and playful. Leads the Superfruit Bowl visuals.</p></div></div>
+      <div class="colour"><img src="img/lem-candy-red-01-clean-front.jpg" alt="Candy Red Lem"><div><b><i style="background:var(--lred)"></i>Candy Red</b><p>Classic holiday red. Bold and festive.</p></div></div>
+      <div class="colour"><img src="img/lem-mulled-wine-01-clean-front.jpg" alt="Mulled Wine Lem"><div><b><i style="background:var(--lwine)"></i>Mulled Wine</b><p>Deep, moody burgundy. The grown-up pick.</p></div></div>
+      <div class="colour"><img src="img/lem-yellow-gold-01-clean-front.jpg" alt="Yellow Gold Lem"><div><b><i style="background:var(--lgold)"></i>Yellow Gold</b><p>A richer, warmer take on the original lemon yellow.</p></div></div>
+    </div>
+
+    <div class="grid2" style="margin-top:20px;align-items:center">
+      <img src="img/lem-colourways.gif" alt="Animation cycling all four Lem colours" style="border-radius:20px">
+      <div>
+        <h3>For reference: the original Lem</h3>
+        <p>The Lem most customers know is lemon yellow. The new colours sit next to it in the range. If a customer asks "is this a new toy?", the answer is no: it's the same Lem in a new colour.</p>
+        <img src="https://hellonancy.com/cdn/shop/files/WhatsAppImage2023-11-18at14.19.19_2acc31e8.webp?v=1762419856&width=800" alt="Original yellow Lem" style="border-radius:16px;max-width:240px;margin-top:10px" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BERRI -->
+<section id="berri">
+  <div class="wrap">
+    <div class="prod-head">
+      <div>
+        <div class="eyebrow">Product 02 · New &amp; improved · Tapping</div>
+        <h2>Berri</h2>
+        <p class="quote">"Berri doesn't rush. It builds."</p>
+        <div class="price"><b>$95</b><s>$189</s></div>
+        <p>Berri is a raspberry-shaped clitoral massager that <b>taps</b> instead of buzzing or sucking. The tapping starts soft and builds slowly, so it's made for longer sessions and "edging" (getting close, easing off, and building again). It's a great pick for people who find Lem too intense.</p>
+        <p>It comes with <b>3 swappable tapping caps</b>. Short cap = stronger tap, medium = balanced, long = softer.</p>
+
+        <h3 style="margin-top:28px">How it works</h3>
+        <ol class="steps">
+          <li><span class="n">1</span><div><b>Charge it.</b> 90 minutes (USB-C) gives up to 2 hours of play.</div></li>
+          <li><span class="n">2</span><div><b>Pick a cap.</b> Start with the medium one.</div></li>
+          <li><span class="n">3</span><div><b>Turn it on.</b> Hold the button for 2 seconds. It taps gently to say hi.</div></li>
+          <li><span class="n">4</span><div><b>Build, pause, return.</b> Short presses move through 12 settings. Start low and work up.</div></li>
+        </ol>
+
+        <div class="note"><b>The new colour:</b> Black Berri, a deep plum-purple. The team calls it "Black Berri" (like a blackberry). Same Berri, only the colour changes.</div>
+      </div>
+
+      <div class="picker" data-picker-berri>
+        <div class="main"><img data-main src="img/berri-black-01-clean-front.jpg" alt="Black Berri"></div>
+        <div class="views">
+          <button data-src="img/berri-black-01-clean-front.jpg" aria-pressed="true"><img src="img/berri-black-01-clean-front.jpg" alt="Studio"></button>
+          <button data-src="img/berri-black-06-hand.jpg" aria-pressed="false"><img src="img/berri-black-06-hand.jpg" alt="In hand"></button>
+          <button data-src="img/berri-black-08-christmas.jpg" aria-pressed="false"><img src="img/berri-black-08-christmas.jpg" alt="Holiday"></button>
+        </div>
+        <div class="chips">
+          <span class="chip" aria-pressed="true"><i style="background:var(--berri)"></i>Black Berri <span class="tag">New</span></span>
+        </div>
+        <p class="caption">Tap a view: studio, in hand, holiday.</p>
+      </div>
+    </div>
+
+    <div class="specs">
+      <div class="spec"><small>Size</small><span>6.4 × 6.4 × 6.3 cm</span></div>
+      <div class="spec"><small>Material</small><span>Medical-grade silicone</span></div>
+      <div class="spec"><small>Water</small><span>IPX7 waterproof</span></div>
+      <div class="spec"><small>Noise</small><span>Under 50 dB, whisper-quiet</span></div>
+      <div class="spec"><small>Charge</small><span>90 min, USB-C</span></div>
+      <div class="spec"><small>Play time</small><span>Up to 120 min</span></div>
+      <div class="spec"><small>Settings</small><span>12 + 3 caps</span></div>
+      <div class="spec"><small>Use</small><span>External only</span></div>
+    </div>
+
+    <div class="gallery">
+      <figure><img src="img/berri-black-02-macro.jpg" alt="Black Berri close-up" loading="lazy"><figcaption>Close-up texture</figcaption></figure>
+      <figure><img src="img/berri-black-06-hand.jpg" alt="Black Berri in hand" loading="lazy"><figcaption>Palm-sized</figcaption></figure>
+      <figure><img src="img/berri-black-08-christmas.jpg" alt="Black Berri holiday" loading="lazy"><figcaption>Holiday mood</figcaption></figure>
+      <figure><img src="https://hellonancy.com/cdn/shop/files/1_5f504f68-c903-4fb7-8fd4-e086752901ce.png?v=1791360488&width=800" alt="Original raspberry Berri" loading="lazy"><figcaption>For reference: original raspberry Berri</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- BOWL -->
+<section id="bowl">
+  <div class="wrap">
+    <div class="bowl">
+      <div>
+        <div class="eyebrow">Where the colours show up first</div>
+        <h2>The <em>Superfruit Bowl</em></h2>
+        <p>The new colours debut in our Black Friday blind box, the Superfruit Bowl. It's a set of three fruit toys in a neon cherry-print bag. The Lem colour is a surprise.</p>
+        <ul class="inbox">
+          <li><i style="background:#9fd3e0"></i><div><b>Avo</b> in Tiffany Snow</div></li>
+          <li><i style="background:var(--berri)"></i><div><b>Berri</b> in Black</div></li>
+          <li><i style="background:conic-gradient(var(--lpink) 0 25%,var(--lred) 0 50%,var(--lwine) 0 75%,var(--lgold) 0)"></i><div><b>Lem</b>, blind: one of Pink, Candy Red, Mulled Wine or Yellow Gold</div></li>
+        </ul>
+        <p class="caption" style="margin-top:14px">Full image set: <a href="https://emmaserrano2596.github.io/superfruit-bowl-pdp/" target="_blank" rel="noopener">Superfruit Bowl PDP assets ↗</a></p>
+      </div>
+      <img src="img/trio-mulled-wine.jpg" alt="Avo, Black Berri and Mulled Wine Lem in snow" loading="lazy">
+    </div>
+
+    <div class="gallery">
+      <figure><img src="img/trio-pink.jpg" alt="Trio with Pink Lem" loading="lazy"><figcaption>With Pink Lem</figcaption></figure>
+      <figure><img src="img/trio-candy-red.jpg" alt="Trio with Candy Red Lem" loading="lazy"><figcaption>With Candy Red Lem</figcaption></figure>
+      <figure><img src="img/trio-mulled-wine.jpg" alt="Trio with Mulled Wine Lem" loading="lazy"><figcaption>With Mulled Wine Lem</figcaption></figure>
+      <figure><img src="img/trio-yellow-gold.jpg" alt="Trio with Yellow Gold Lem" loading="lazy"><figcaption>With Yellow Gold Lem</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="eyebrow">Quick answers</div>
+    <h2>FAQ</h2>
+    <div style="margin-top:20px">
+      <details><summary>Are these new products?</summary><p>No. Lem and Berri are existing products. Only the colours are new. Specs, settings, materials and how they feel are exactly the same.</p></details>
+      <details><summary>Which one should a first-timer get?</summary><p>Lem is our go-to beginner pick: one button, easy to use, and it works fast. Berri suits people who want a slower build or who find suction too strong.</p></details>
+      <details><summary>Can they be used in the shower or bath?</summary><p>Yes. Both are IPX7, which means fully waterproof. Rinse with warm water and mild soap after use.</p></details>
+      <details><summary>Are they insertable?</summary><p>No. Both Lem and Berri are for external use only.</p></details>
+      <details><summary>What lube works with them?</summary><p>Water-based lube only. Silicone lube can damage the silicone surface.</p></details>
+      <details><summary>Are they loud?</summary><p>No. Both run under 50 dB, which is quieter than a normal conversation.</p></details>
+      <details><summary>Is shipping discreet?</summary><p>Yes. Orders ship in plain packaging, and the card statement shows "SP HELLO NANCY" or "SP RCH NANCY".</p></details>
+      <details><summary>Can customers buy a specific new colour on its own?</summary><p>To confirm with the launch team. At launch, the new colours first appear in the Superfruit Bowl blind box, where the Lem colour is a surprise.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- GLOSSARY -->
+<section id="words">
+  <div class="wrap">
+    <div class="eyebrow">New to this?</div>
+    <h2>Words you'll <em>hear a lot</em></h2>
+    <div class="gloss" style="margin-top:20px">
+      <div><b>Colourway</b><span>The same product made in a different colour.</span></div>
+      <div><b>Clitoral massager</b><span>A toy used on the clitoris, on the outside of the body.</span></div>
+      <div><b>Air suction / air pulse</b><span>Lem's technology. Soft waves of air create a pulling sensation, without direct contact like a vibrator.</span></div>
+      <div><b>Tapping (TapSphere™)</b><span>Berri's patent-pending technology. Rhythmic taps instead of a constant buzz.</span></div>
+      <div><b>Edging</b><span>Building up close to climax, easing off, then building again. Berri is designed for this.</span></div>
+      <div><b>IPX7</b><span>A waterproof rating. Safe in the bath and shower.</span></div>
+      <div><b>Medical-grade silicone</b><span>Smooth, body-safe material used in medical products. Easy to clean.</span></div>
+      <div><b>PDP</b><span>Product detail page. The product's page on hellonancy.com.</span></div>
+      <div><b>BFCM</b><span>Black Friday / Cyber Monday sale period.</span></div>
+      <div><b>Blind box</b><span>A box where you don't know exactly what's inside until you open it.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Product pages: <a href="https://hellonancy.com/products/lem" target="_blank" rel="noopener">Lem ↗</a> · <a href="https://hellonancy.com/products/berri" target="_blank" rel="noopener">Berri ↗</a><br>
+    Hello Nancy · Internal product brief for the team and partners · Nov 2026
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Lem picker: colour × view
+  var p=document.querySelector('[data-picker]'); if(!p) return;
+  var main=p.querySelector('[data-main]'), colour='pink', view='01-clean-front';
+  var names={'pink':'Pink','candy-red':'Candy Red','mulled-wine':'Mulled Wine','yellow-gold':'Yellow Gold'};
+  function render(){
+    main.src='img/lem-'+colour+'-'+view+'.jpg'; main.alt=names[colour]+' Lem';
+    p.querySelectorAll('[data-view]').forEach(function(b){ b.querySelector('img').src='img/lem-'+colour+'-'+b.dataset.view+'.jpg'; b.setAttribute('aria-pressed', b.dataset.view===view); });
+    p.querySelectorAll('[data-colour]').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.colour===colour); });
+  }
+  p.addEventListener('click',function(e){
+    var c=e.target.closest('[data-colour]'), v=e.target.closest('[data-view]');
+    if(c){colour=c.dataset.colour;render();} if(v){view=v.dataset.view;render();}
+  });
+  // Berri picker: views only
+  var b=document.querySelector('[data-picker-berri]'); if(!b) return;
+  var bm=b.querySelector('[data-main]');
+  b.addEventListener('click',function(e){
+    var v=e.target.closest('[data-src]'); if(!v) return;
+    bm.src=v.dataset.src;
+    b.querySelectorAll('[data-src]').forEach(function(x){x.setAttribute('aria-pressed',x===v);});
+  });
+})();
+</script>
+</body>
+</html>
