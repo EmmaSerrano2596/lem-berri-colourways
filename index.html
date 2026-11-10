@@ -32,7 +32,7 @@ section{padding:72px 0;border-top:1px solid var(--line)}
 /* hero */
 header{padding:48px 0 32px}
 .tagline{font-family:Fraunces,serif;font-style:italic;font-size:24px;color:var(--muted);margin:10px 0 24px}
-.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:28px 0}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0}
 .fact{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}
 .fact b{display:block;font-family:Fraunces,serif;font-size:28px;line-height:1.1}
 .fact span{font-size:13px;color:var(--muted)}
@@ -142,10 +142,20 @@ section.dark .sub{color:#b9a3ad;margin:0 0 18px}
 .shots figcaption a:hover{text-decoration:underline}
 @media (max-width:860px){.shots{grid-template-columns:repeat(2,1fr)}.set-head{flex-direction:column;align-items:flex-start}}
 
+
+/* fruit bowl gallery (light) */
+.fb{margin-top:44px}
+.fb .set-head p{color:var(--muted)}
+.fb .dl-btn{color:var(--ink);border-color:var(--ink)}
+.fb .dl-btn:hover{color:var(--accent);border-color:var(--accent)}
+.fb .shots figure{background:var(--card);border-color:var(--line)}
+.fb .shots figcaption{color:var(--ink)}
+.fb .shots figcaption a{color:var(--accent)}
+
 footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
 
 @media (max-width:860px){
-  .facts{grid-template-columns:repeat(2,1fr)}
+  .facts{grid-template-columns:1fr}
   .grid2,.prod-head,.bowl{grid-template-columns:1fr}
   .grid3{grid-template-columns:1fr}
   .colours,.gallery{grid-template-columns:repeat(2,1fr)}
@@ -163,16 +173,15 @@ footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--muted);f
     <div class="eyebrow">Hello Nancy · Product brief · Nov 2026</div>
     <h1>Lem &amp; Berri,<br><em>new colours.</em></h1>
     <p class="tagline">Same favourites. Fresh new looks for the holidays.</p>
-    <p class="lede">We're launching our two hero toys, <b>Lem</b> and <b>Berri</b>, in new colourways. Nothing about how they work changes. Same feel, same settings, same specs. Only the colour is new. This page explains what each product is, so anyone can pick it up with zero background.</p>
+    <p class="lede">We're launching our two hero toys, <b>Lem</b> and <b>Berri</b>, in new colourways. Nothing about how they work changes. Same feel, same settings, same specs. Only the colour is new.</p>
 
     <div class="facts">
       <div class="fact"><b>2</b><span>products: Lem and Berri</span></div>
       <div class="fact"><b>5</b><span>new colours (4 Lem, 1 Berri)</span></div>
       <div class="fact"><b>0</b><span>changes to how they work</span></div>
-      <div class="fact"><b>BFCM</b><span>first seen in the Black Friday Superfruit Bowl</span></div>
     </div>
 
-    <div class="hero-img"><img src="img/hero-lem-colours.gif" alt="Avo, Black Berri and Lem cycling through Pink, Candy Red, Mulled Wine and Yellow Gold"></div>
+    <div class="hero-img"><img src="img/hero-fruit-crate.jpg" alt="All four new Lem colours, Black Berri and Avo spilling from a fruit crate"></div>
   </div>
 </header>
 
@@ -338,14 +347,21 @@ footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--muted);f
         </ul>
         <p class="caption" style="margin-top:14px">Full image set: <a href="https://emmaserrano2596.github.io/superfruit-bowl-pdp/" target="_blank" rel="noopener">Superfruit Bowl PDP assets ↗</a></p>
       </div>
-      <img src="img/trio-mulled-wine.jpg" alt="Avo, Black Berri and Mulled Wine Lem in snow" loading="lazy">
+      <img src="img/fb-bowl-flatlay.jpg" alt="Four Lem colours in a fruit bowl with Avo and Black Berri" loading="lazy">
     </div>
 
-    <div class="gallery">
-      <figure><img src="img/trio-pink.jpg" alt="Trio with Pink Lem" loading="lazy"><figcaption>With Pink Lem</figcaption></figure>
-      <figure><img src="img/trio-candy-red.jpg" alt="Trio with Candy Red Lem" loading="lazy"><figcaption>With Candy Red Lem</figcaption></figure>
-      <figure><img src="img/trio-mulled-wine.jpg" alt="Trio with Mulled Wine Lem" loading="lazy"><figcaption>With Mulled Wine Lem</figcaption></figure>
-      <figure><img src="img/trio-yellow-gold.jpg" alt="Trio with Yellow Gold Lem" loading="lazy"><figcaption>With Yellow Gold Lem</figcaption></figure>
+    <div class="fb">
+      <div class="set-head"><div><h3>Fruit bowl shots</h3><p>The whole range styled with real fruit. Click for full size.</p></div><a class="dl-btn" href="img/fruit-bowl-all.zip" download>Download all 9 (.zip)</a></div>
+      <div class="shots">
+        <figure><a href="img/fb-prep.jpg" target="_blank"><img src="img/fb-prep.jpg" alt="Fruit bowl, food prep" loading="lazy"></a><figcaption><b>Food prep</b><a href="img/fb-prep.jpg" download>Download</a></figcaption></figure>
+        <figure><a href="img/fb-moody.jpg" target="_blank"><img src="img/fb-moody.jpg" alt="Fruit bowl, moody close" loading="lazy"></a><figcaption><b>Moody close</b><a href="img/fb-moody.jpg" download>Download</a></figcaption></figure>
+        <figure><a href="img/fb-ice.jpg" target="_blank"><img src="img/fb-ice.jpg" alt="Fruit bowl, on ice" loading="lazy"></a><figcaption><b>On ice</b><a href="img/fb-ice.jpg" download>Download</a></figcaption></figure>
+        <figure><a href="img/fb-colour-block.jpg" target="_blank"><img src="img/fb-colour-block.jpg" alt="Fruit bowl, colour block" loading="lazy"></a><figcaption><b>Colour block</b><a href="img/fb-colour-block.jpg" download>Download</a></figcaption></figure>
+        <figure><a href="img/fb-macro.jpg" target="_blank"><img src="img/fb-macro.jpg" alt="Fruit bowl, macro" loading="lazy"></a><figcaption><b>Macro</b><a href="img/fb-macro.jpg" download>Download</a></figcaption></figure>
+        <figure><a href="img/fb-board.jpg" target="_blank"><img src="img/fb-board.jpg" alt="Fruit bowl, on the board" loading="lazy"></a><figcaption><b>On the board</b><a href="img/fb-board.jpg" download>Download</a></figcaption></figure>
+        <figure><a href="img/fb-hand.jpg" target="_blank"><img src="img/fb-hand.jpg" alt="Fruit bowl, in hand" loading="lazy"></a><figcaption><b>In hand</b><a href="img/fb-hand.jpg" download>Download</a></figcaption></figure>
+        <figure><a href="img/fb-bowls.jpg" target="_blank"><img src="img/fb-bowls.jpg" alt="Fruit bowl, bowls flatlay" loading="lazy"></a><figcaption><b>Bowls flatlay</b><a href="img/fb-bowls.jpg" download>Download</a></figcaption></figure>
+      </div>
     </div>
   </div>
 </section>
