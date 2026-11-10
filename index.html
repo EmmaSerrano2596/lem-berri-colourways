@@ -143,6 +143,9 @@ section.dark .sub{color:#b9a3ad;margin:0 0 18px}
 @media (max-width:860px){.shots{grid-template-columns:repeat(2,1fr)}.set-head{flex-direction:column;align-items:flex-start}}
 
 
+
+.views-strip{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:4px}
+.views-strip button{flex:0 0 calc(25% - 6px);scroll-snap-align:start}
 /* fruit bowl gallery (light) */
 .dl-dark{color:var(--ink);border-color:var(--ink)}
 .dl-dark:hover{color:var(--accent);border-color:var(--accent)}
@@ -302,16 +305,22 @@ footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--muted);f
       </div>
 
       <div class="picker" data-picker-berri>
-        <div class="main"><img data-main src="img/berri-black-01-clean-front.jpg" alt="Black Berri"></div>
-        <div class="views">
-          <button data-src="img/berri-black-01-clean-front.jpg" aria-pressed="true"><img src="img/berri-black-01-clean-front.jpg" alt="Studio"></button>
-          <button data-src="img/pdp-berri-ribbon.jpg" aria-pressed="false"><img src="img/pdp-berri-ribbon.jpg" alt="Ribbon in snow"></button>
-          <button data-src="img/berri-black-08-christmas.jpg" aria-pressed="false"><img src="img/berri-black-08-christmas.jpg" alt="Holiday"></button>
+        <div class="main"><img data-main src="img/bb2-01-clean-front.jpg" alt="Black Berri"></div>
+        <div class="views views-strip">
+          <button data-src="img/bb2-01-clean-front.jpg" aria-pressed="true"><img src="img/bb2-01-clean-front.jpg" alt="Studio" loading="lazy"></button>
+          <button data-src="img/pdp-berri-ribbon.jpg" aria-pressed="false"><img src="img/pdp-berri-ribbon.jpg" alt="Ribbon in snow" loading="lazy"></button>
+          <button data-src="img/bb2-02-macro.jpg" aria-pressed="false"><img src="img/bb2-02-macro.jpg" alt="Tapping head close-up" loading="lazy"></button>
+          <button data-src="img/bb2-03-side.jpg" aria-pressed="false"><img src="img/bb2-03-side.jpg" alt="With the 3 tapping caps" loading="lazy"></button>
+          <button data-src="img/bb2-04-dynamic.jpg" aria-pressed="false"><img src="img/bb2-04-dynamic.jpg" alt="Angled close-up" loading="lazy"></button>
+          <button data-src="img/bb2-05-hand.jpg" aria-pressed="false"><img src="img/bb2-05-hand.jpg" alt="In hand" loading="lazy"></button>
+          <button data-src="img/bb2-06-hand.jpg" aria-pressed="false"><img src="img/bb2-06-hand.jpg" alt="In hand, raised" loading="lazy"></button>
+          <button data-src="img/bb2-07-christmas.jpg" aria-pressed="false"><img src="img/bb2-07-christmas.jpg" alt="Holiday, pine" loading="lazy"></button>
+          <button data-src="img/bb2-08-christmas.jpg" aria-pressed="false"><img src="img/bb2-08-christmas.jpg" alt="Holiday, ornament" loading="lazy"></button>
         </div>
         <div class="chips">
           <span class="chip" aria-pressed="true"><i style="background:var(--berri)"></i>Black Berri <span class="tag">New</span></span>
         </div>
-        <p class="caption">Tap a view: studio, ribbon in snow, holiday.</p>
+        <p class="caption">Tap a thumbnail to see it larger. Swipe for more.</p>
       </div>
     </div>
 
@@ -541,7 +550,7 @@ footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--muted);f
   var bm=b.querySelector('[data-main]');
   b.addEventListener('click',function(e){
     var v=e.target.closest('[data-src]'); if(!v) return;
-    bm.src=v.dataset.src;
+    bm.src=v.dataset.src; bm.alt='Black Berri, '+(v.querySelector('img').alt||'');
     b.querySelectorAll('[data-src]').forEach(function(x){x.setAttribute('aria-pressed',x===v);});
   });
 })();
